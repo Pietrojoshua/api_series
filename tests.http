@@ -1,9 +1,4 @@
-### Variáveis de ambiente
 @base_url = http://127.0.0.1:8000
-
-### Teste de conexão com a API
-GET {{base_url}}/ HTTP/1.1
-Accept: application/json
 
 ### Criação de uma série
 POST {{base_url}}/ HTTP/1.1
@@ -17,4 +12,18 @@ Content-Type: application/json
 
 ### Obtenção de todas as séries
 GET {{base_url}}/series HTTP/1.1
+Accept: application/json
+
+### Atualização da série (substitua manualmente pelo id retornado)
+PUT {{base_url}}/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Rick and Morty Updated",
+    "descricao": "Novas aventuras interdimensionais",
+    "ano_lancamento": 2014
+}
+
+### Deleção da série (substitua manualmente pelo id retornado)
+DELETE {{base_url}}/1 HTTP/1.1
 Accept: application/json

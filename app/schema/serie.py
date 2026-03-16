@@ -7,4 +7,5 @@ class SerieSchema(BaseModel):
     ano_lancamento: int
 
     class Config:
-        from_attributes = True
+        from_attributes = True  # Pydantic v2
+        # Para Pydantic v1: use orm_mode = True
